@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz rejestracji</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 500px;
+            margin-top: 70px;
+        }
+        .card {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .card-header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border-bottom: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .card-header h3 {
+            font-weight: 600;
+            font-size: 24px;
+            margin-bottom: 0;
+            color: white;
+            letter-spacing: 0.5px;
+        }
+        .card-body {
+            padding: 30px;
+            background-color: white;
+        }
+        .form-label {
+            font-weight: 500;
+            color: #495057;
+            margin-bottom: 8px;
+        }
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #ced4da;
+            transition: all 0.3s;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 3px rgba(101, 103, 255, 0.2);
+            border-color: #6a11cb;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 15px;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+        }
+        .input-group-text {
+            background-color: #f8f9fa;
+            border-radius: 8px 0 0 8px;
+        }
+        .invalid-feedback {
+            font-size: 0.85rem;
+            margin-top: 5px;
+            display: none;
+            color: #dc3545;
+        }
+        .was-validated .form-control:invalid ~ .invalid-feedback,
+        .was-validated .form-control:invalid + .invalid-feedback,
+        .was-validated .input-group:has(.form-control:invalid) .invalid-feedback {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">Rejestracja użytkownika</h3>
+            </div>
+            <div class="card-body">
+                <form class="needs-validation" novalidate>
+                    <!-- Pole na imię -->
+                    <div class="mb-4">
+                        <label for="userName" class="form-label">Imię</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                            <input type="text" class="form-control" id="userName" placeholder="Wprowadź imię" required>
+                            <div class="invalid-feedback">
+                                Proszę podać imię.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pole na e-mail -->
+                    <div class="mb-4">
+                        <label for="userEmail" class="form-label">E-mail</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                            <input type="email" class="form-control" id="userEmail" placeholder="przyklad@domena.pl" required>
+                            <div class="invalid-feedback">
+                                Proszę podać prawidłowy adres e-mail.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pole na hasło -->
+                    <div class="mb-4">
+                        <label for="userPassword" class="form-label">Hasło</label>
+                        <div class="input-group has-validation">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" id="userPassword" placeholder="Minimum 8 znaków" required minlength="8">
+                            <div class="invalid-feedback">
+                                Hasło musi mieć co najmniej 8 znaków.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Przycisk "Zarejestruj się" -->
+                    <button type="submit" class="btn btn-primary w-100">Zarejestruj się</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS & Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Funkcja do obsługi walidacji formularza Bootstrap
+        (function () {
+            'use strict'
+            
+            // Pobranie formularza
+            var form = document.querySelector('.needs-validation');
+            
+            // Obsługa przesłania formularza
+            form.addEventListener('submit', function (event) {
+                // Zapobiegnięcie przeładowaniu strony
+                event.preventDefault();
+                
+                // Sprawdzenie pola formularza spełniają ustalone kryteria
+                if (!form.checkValidity()) {
+                    // Obsługa zdarzenia nieprawidłowej walidacji
+                    event.stopPropagation();
+                } else {
+
+                    // Wyświetlenie komunikatu o powodzeniu
+                    alert('Formularz został pomyślnie wysłany!');
+                    
+                    // Wyczyszczenie pól formularza
+                    form.reset();
+                    
+                    // Usunięcie klasy walidacji, aby zresetować stan walidacji
+                    form.classList.remove('was-validated');
+                    
+                    return;
+                }
+
+                // Dodanie klasy walidacji dzięki czemu wyświetlą się komunikaty o błędach w formularzu
+                form.classList.add('was-validated');
+            });
+        })();
+    </script>
+</body>
+</html>
