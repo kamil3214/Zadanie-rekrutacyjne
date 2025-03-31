@@ -1,5 +1,5 @@
 <?php
-$connection = mysqli_connect("localhost", "root", "", "users_db");
+$connection = mysqli_connect("localhost", "root", "password", "users_db");
 
 $query = "SELECT * FROM users";
 // Poprawienie błędu
