@@ -21,4 +21,4 @@
 
 **zadanie3_test.html** - prosta strona z przyciskiem, który wykorzysuje stworzony skrypt
 
-**Komentarz:** Zdecydowałem się na stworzenie skryptu do zmiany koloru w oddzielnym pliku, co ułatwia wykorzystanie go przy wielu stronach/projektach i umożliwia podpięcie funkcji zmiany koloru pod dowolny klikalny element lub wykorzystanie jej w innej sytuacji (np. zmiana koloru po upłynięciu określonego czasu itp.). Kod został przetestowany na przeglądarkach: *Google Chrome, Opera, Opera GX, Mozilla Firefox, Brave, Microsoft Edge*.
+**Komentarz:** Zdecydowałem się na stworzenie skryptu do zmiany koloru w oddzielnym pliku, co ułatwia wykorzystanie go przy wielu stronach/projektach i umożliwia podpięcie funkcji zmiany koloru pod dowolny klikalny element lub wykorzystanie jej w innej sytuacji (np. zmiana koloru po upłynięciu określonego czasu itp.). Skrypt został przetestowany na przeglądarkach: *Google Chrome, Opera, Opera GX, Mozilla Firefox, Brave, Microsoft Edge*.
