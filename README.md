@@ -11,11 +11,9 @@
 
 **users_db.sql** - przykładowa baza danych stworzona w celach testowania rozwiązania z użyciem XAMPP'a
 
-
 ## Zadanie 2.
 
 **zadanie2.html** - prosty formularz rejestracji użytkownika, stworzony z wykorzystaniem Bootstrapa
-
 
 ## Zadanie 3.
 
