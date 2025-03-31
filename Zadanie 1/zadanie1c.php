@@ -14,7 +14,7 @@
     </form>
     
 <?php
-$connection = mysqli_connect("localhost", "root", "", "users_db");
+$connection = mysqli_connect("localhost", "root", "password", "users_db");
 
 // Obsługa formularza
 if (isset($_POST['submit'])) {
