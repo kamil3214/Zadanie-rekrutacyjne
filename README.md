@@ -3,7 +3,7 @@
 
 ## Zadanie 1.
 
-**zadanie1a.php** - kod z poprawionym błędem i dodanym zabezpieczeniem przed Cross-site scripting (XSS), bez zabezpieczenia przed SQL injection, ponieważ używane query *"SELECT * FROM users"* jest statyczne tzn. nie przyjmuje danych od użytkownika i nie zmienia się podczas wykonywania programu, co czyni je odpornym na SQL injection
+**zadanie1a.php** - kod z poprawionym błędem i dodanym zabezpieczeniem przed Cross-site scripting (XSS), bez zabezpieczenia przed SQL injection, ponieważ używane query *"SELECT * FROM users"* jest statyczne tzn. nie przyjmuje danych od użytkownika i nie zmienia się podczas wykonywania programu, co czyni je naturalnie odpornym na SQL injection
 
 **zadanie1b.php** - kod z poprawionym błędem, zabezpieczniem przed Cross-site scripting (XSS), wykorzystujący *prepared statement* do zabezpieczenia przed SQL injection, mimo iż w tym przypadku nie jest to konieczne
 
