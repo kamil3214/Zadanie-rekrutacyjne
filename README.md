@@ -9,7 +9,7 @@
 
 **zadanie1c.php** - zmodyfikowany na potrzeby zadania przykład, przyjmujący dane od użytkownika w celu wyświetlenia wiersza o konkretnym ID, zastosowanie *prepared statement* w tym przypadku jest konieczne ze względu na ryzyko wystąpienia SQL injection
 
-**users_db.sql** - przykładowa baza danych stworzona w celach testowania rozwiązania z użyciem XAMPP'a
+**users_db.sql** - przykładowa baza danych stworzona w celach testowania rozwiązania
 
 ## Zadanie 2.
 
